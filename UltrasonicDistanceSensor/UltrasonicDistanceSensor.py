@@ -3,12 +3,12 @@ import time
 
 class UltrasonicDistanceSensor:
 	"""
-	@flowerChildParameter { ref = "echo", type = "int" }
-	@flowerChildParameter { ref = "trigger", type = "int" }
+	@flowerChildParameter { ref = "echo_pin", type = "int" }
+	@flowerChildParameter { ref = "trigger_pin", type = "int" }
 	"""
-	def __init__(self, echo = 23, trigger = 24):
-		self.GPIO_TRIGGER = trigger
-		self.GPIO_ECHO = echo
+	def __init__(self, echo_pin = 23, trigger_pin = 24):
+		self.GPIO_TRIGGER = trigger_pin
+		self.GPIO_ECHO = echo_pin
 
 	def setup(self):
 		GPIO.setwarnings(False)
