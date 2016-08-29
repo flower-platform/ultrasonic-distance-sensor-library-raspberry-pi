@@ -17,7 +17,6 @@ class UltrasonicDistanceSensor:
 		GPIO.setup(self.GPIO_ECHO, GPIO.IN)
 
 	def stop(self):
-		GPIO.cleanup()
 		return
 
 	def distance(self):
@@ -34,6 +33,6 @@ class UltrasonicDistanceSensor:
 		distance = (TimeElapsed * 34300) / 2
 		return distance
 		
-    def loop(self):
-        return
+	def loop(self):
+		return
 
